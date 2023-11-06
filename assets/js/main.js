@@ -21,3 +21,21 @@ function getLevelImc(imc) {
   const imc = weight / height ** 2;
   return imc.toFixed(2);
 }
+
+function createP() {
+  const párrafo = document.createElement('p');
+  return párrafo;
+ }
+
+ function ObtenerResultado(msg, isValid) {
+  const result = document.querySelector('#result');
+  result.innerHTML = '';
+  const párrafo = createP();
+  if (isValid) {
+    párrafo.classList.add('paragraph-result');
+  } else {
+    párrafo.classList.add('bad');
+  }
+  párrafo.innerHTML = msg;
+  result.appendChild(párrafo);
+ }
