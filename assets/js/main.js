@@ -5,7 +5,7 @@ form.addEventListener('submit', function (e) {
     const inputHeight = e.target.querySelector('#height');
     const weight = Number(inputWeight.value);
     const height = Number(inputHeight.value);
-    //creo una condición
+
     if (!weight) {
         setResult('Peso inválido', false);
         return;
@@ -15,7 +15,7 @@ form.addEventListener('submit', function (e) {
         setResult('Altura inválida', false);
         return;
     }
-    //creo constantes
+
     const imc = getImc(weight, height);
     const levelImc = getLevelImc(imc);
 
