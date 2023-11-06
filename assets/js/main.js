@@ -17,3 +17,7 @@ function getLevelImc(imc) {
   if (imc >= 18.5) return level[1];
   if (imc < 18.5) return level[0];
  }
+ function funcionNancy(weight, height) {
+  const imc = weight / height ** 2;
+  return imc.toFixed(2);
+}
