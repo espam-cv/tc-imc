@@ -23,19 +23,19 @@ function getLevelImc(imc) {
 }
 
 function createP() {
-  const párrafo = document.createElement('p');
-  return párrafo;
+  const p = document.createElement('p');
+  return p;
  }
 
- function ObtenerResultado(msg, isValid) {
+ function setResult(msg, isValid) {
   const result = document.querySelector('#result');
   result.innerHTML = '';
-  const párrafo = createP();
+  const p = createP();
   if (isValid) {
-    párrafo.classList.add('paragraph-result');
+    p.classList.add('paragraph-result');
   } else {
-    párrafo.classList.add('bad');
+    p.classList.add('bad');
   }
-  párrafo.innerHTML = msg;
-  result.appendChild(párrafo);
+  p.innerHTML = msg;
+  result.appendChild(p);
  }
